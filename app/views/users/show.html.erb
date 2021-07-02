@@ -1,1 +1,7 @@
 <h1><%= @user.username %></h1>
+<ol>
+<%@user.posts.each do |item|%>
+<li><p><%=item.title%></p>
+<p><%=item.body%></p></li>
+<%end%>
+</ol>
