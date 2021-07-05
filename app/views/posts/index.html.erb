@@ -1,0 +1,6 @@
+<h1>Here the all the posts</h1>
+
+<% @posts.each do |p_item|%>
+<%=p_item.user.username+" / "+p_item.title+" / "+p_item.body%>
+<br>
+<%end%>
