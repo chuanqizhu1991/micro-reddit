@@ -1,7 +1,13 @@
 <h1><%= @user.username %></h1>
+<h4>Posts</h4>
 <ol>
-<%@user.posts.each do |item|%>
-<li><p><%=item.title%></p>
-<p><%=item.body%></p></li>
+<%@user.posts.each do |p_item|%>
+<li><strong><%=p_item.title + " / " + p_item.body%></strong></li>
+<h4>Comments</h3>
+<ul>
+<%p_item.comments.each do |c_item|%>
+<li><p><%=c_item.body%></p></li>
+<%end%>
+</ul>
 <%end%>
 </ol>
